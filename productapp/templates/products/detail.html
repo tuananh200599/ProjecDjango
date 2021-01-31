@@ -1,0 +1,49 @@
+{% extends "products/layout.html" %}
+{% block content %}
+
+<div class="container">
+    <h6 class="display-4">Details</h6>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1></h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 text-primary">
+                    <span class="label label-primary ">Tên sản phẩm:{{Product.Name}}</span>
+                    <span><img src="{{Product.Image.url}}" width="590px" height="300px" /></span>
+
+                    <span class="monospaced"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="description">
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+
+                </div>
+            </div>
+
+            <hr />
+
+            <ul class="list-group">
+                <li class="list-group-item"><span class="font-weight-bold">Thể loại:{{Product.Category}} </span></li>
+                <li class="list-group-item"><span class="font-weight-bold">Mô tả :{{Product.Description}} </span></li>
+                <li class="list-group-item"><span class="font-weight-bold">Số lượng  :{{Product.Amount}} </span></li>
+                <li class="list-group-item"><span class="font-weight-bold">Giá : {{Product.Price}} VND</span></li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
