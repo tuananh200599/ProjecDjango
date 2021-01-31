@@ -1,0 +1,38 @@
+{% extends "products/layout.html" %}
+
+{% block title %}
+Product
+{% endblock %}
+
+{% block content %}
+<p>
+   <a class="btn btn-outline-info text-center" href="http://127.0.0.1:8000/admin/productapp/product/add/">
+        Create New Product
+   </a>
+</p>
+<div class="container">
+
+        <div class="row" >
+        {% for product in Products %}
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="{{ product.Image.url }}" style="..." alt="Card image" height="300px" width="100%">
+              <div class="card-body tm-bg-pink-light2">
+                  <h2 class="card-title">{{ product.Name }}</h2>
+                  <h6 class="card-text">{{ product.Description }}</h6>
+                  <ul class="list-group list-group-flush">
+                    <li class="card-title"> Số lượng : {{ product.Amount }}</li>
+                    <li class="card-title"> Giá : {{ product.Price }}vnđ  </li>
+                    <li class="card-title"> Thể loại : {{ product.Category }}</li>
+                  </ul>
+                <div class="tm-buy-box">
+                  <a href="#" class="tm-bg-blue tm-text-white tm-buy">Detail</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+    </div>
+</div>
+</div>
+{% endblock %}
